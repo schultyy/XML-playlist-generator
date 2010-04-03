@@ -5,10 +5,13 @@ using System.Xml;
 
 namespace XML_Playlist_Generator
 {
+    /// <summary>
+    /// XML-Playlist
+    /// </summary>
     public class Playlist
     {
         /// <summary>
-        /// Playlistdokument
+        /// Playlist document
         /// </summary>
         private XmlDocument doc;
 
@@ -20,8 +23,10 @@ namespace XML_Playlist_Generator
         public Playlist(string name)
         {
             this.doc = new XmlDocument();
-            //Root Knoten erzeugen
+            //Creating Root - element
             this.root = this.doc.CreateElement(name);
         }
+
+
     }
 }

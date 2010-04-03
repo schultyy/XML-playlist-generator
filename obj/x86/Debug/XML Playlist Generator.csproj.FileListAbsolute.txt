@@ -1,0 +1,9 @@
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Debug\XML Playlist Generator.exe
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Debug\XML Playlist Generator.pdb
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML_Playlist_Generator.fMain.resources
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML_Playlist_Generator.Properties.Resources.resources
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\ResGen.read.1.tlog
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\ResGen.write.1.tlog
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML Playlist Generator.exe
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML Playlist Generator.pdb
