@@ -1,0 +1,10 @@
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Release\XML Playlist Generator.exe
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Release\XML Playlist Generator.pdb
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Release\taglib-sharp.dll
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\XML_Playlist_Generator.fMain.resources
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\XML_Playlist_Generator.Properties.Resources.resources
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\ResGen.read.1.tlog
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\ResGen.write.1.tlog
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\XML Playlist Generator.exe
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Release\XML Playlist Generator.pdb
