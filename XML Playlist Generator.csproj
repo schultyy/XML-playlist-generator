@@ -39,8 +39,12 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="taglib-sharp">
+      <HintPath>..\..\MP3\taglib-sharp-2.0.3.6\taglib-sharp-2.0.3.6\bin\Release\taglib-sharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Album.cs" />
     <Compile Include="fMain.cs">
       <SubType>Form</SubType>
     </Compile>

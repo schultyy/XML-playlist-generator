@@ -7,3 +7,4 @@ D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Deb
 D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\ResGen.write.1.tlog
 D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML Playlist Generator.exe
 D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\obj\x86\Debug\XML Playlist Generator.pdb
+D:\Entwicklung\Dot net\XML Playlist Generator\XML Playlist Generator\bin\Debug\taglib-sharp.dll

@@ -5,14 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.IO;
+using System.Xml;
 
 namespace XML_Playlist_Generator
 {
     public partial class fMain : Form
     {
+        private Playlist p;
         public fMain()
         {
             InitializeComponent();
+           
         }
 
         private void btBrowseRoot_Click(object sender, EventArgs e)
@@ -40,6 +44,12 @@ namespace XML_Playlist_Generator
             {
                 this.txtPlaylist.Text = dialog.FileName;
             }
+        }
+
+        private void btCreatePlaylist_Click(object sender, EventArgs e)
+        {
+            Playlist p = new Playlist(this.txtRootfolder.Text, this.txtPlaylist.Text);
+            p.Scan();
         }
     }
 }

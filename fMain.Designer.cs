@@ -36,6 +36,7 @@
             this.btBrowseFile = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btCreatePlaylist = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbSelectFolder
@@ -53,6 +54,7 @@
             this.txtRootfolder.Name = "txtRootfolder";
             this.txtRootfolder.Size = new System.Drawing.Size(559, 26);
             this.txtRootfolder.TabIndex = 1;
+            this.txtRootfolder.Text = "D:\\Musik\\Metallica";
             // 
             // btBrowseRoot
             // 
@@ -71,6 +73,7 @@
             this.txtPlaylist.Name = "txtPlaylist";
             this.txtPlaylist.Size = new System.Drawing.Size(559, 26);
             this.txtPlaylist.TabIndex = 3;
+            this.txtPlaylist.Text = "C:\\Users\\Jan Schulte\\Documents\\Test.xml";
             // 
             // lbSelectPlaylist
             // 
@@ -108,13 +111,23 @@
             this.btCreatePlaylist.TabIndex = 7;
             this.btCreatePlaylist.Text = "Create playlist";
             this.btCreatePlaylist.UseVisualStyleBackColor = true;
+            this.btCreatePlaylist.Click += new System.EventHandler(this.btCreatePlaylist_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(15, 162);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(556, 39);
+            this.textBox1.TabIndex = 8;
             // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(722, 257);
+            this.ClientSize = new System.Drawing.Size(722, 213);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btCreatePlaylist);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btBrowseFile);
@@ -125,7 +138,7 @@
             this.Controls.Add(this.lbSelectFolder);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Window;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fMain";
             this.Opacity = 0.8D;
             this.Text = "XML Playlist Generator";
@@ -144,6 +157,7 @@
         private System.Windows.Forms.Button btBrowseFile;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btCreatePlaylist;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

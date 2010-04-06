@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.IO;
+using TagLib;
 
 namespace XML_Playlist_Generator
 {
@@ -11,22 +13,57 @@ namespace XML_Playlist_Generator
     public class Playlist
     {
         /// <summary>
-        /// Playlist document
+        /// Root folder containing album folders
         /// </summary>
-        private XmlDocument doc;
+        private string rootFolder;
 
         /// <summary>
-        /// Root-Element
+        /// Name for the xml playlistfile
         /// </summary>
-        private XmlNode root;
+        private string filename;
 
-        public Playlist(string name)
+        /// <summary>
+        /// Creates a new Playlist
+        /// </summary>
+        /// <param name="rootfolder">Root folder containing album folders</param>
+        /// <param name="filename">Name for the xml playlistfile</param>
+        public Playlist(string rootfolder, string filename)
         {
-            this.doc = new XmlDocument();
-            //Creating Root - element
-            this.root = this.doc.CreateElement(name);
+            this.rootFolder = rootfolder;
+            this.filename = filename;
         }
 
+        public void Scan()
+        {
+            DirectoryInfo[] albums = null;
+            DirectoryInfo root = new DirectoryInfo(this.rootFolder);
+            albums = root.GetDirectories();
 
+            //Object, that writes the output file
+            XmlTextWriter textWriter = new XmlTextWriter(this.filename, null);
+            textWriter.Formatting = Formatting.Indented;
+            textWriter.WriteStartElement("featureset");
+            foreach (DirectoryInfo d in albums)
+            {
+                FileInfo[] files = d.GetFiles();
+
+                //Writing new album tag
+                textWriter.WriteStartElement("album");
+                textWriter.WriteStartAttribute("name");
+                textWriter.WriteValue(d.Name);
+
+                foreach (FileInfo file in files)
+                {
+                    if (file.Extension == ".mp3")
+                    {
+                        TagLib.File f = TagLib.File.Create(file.FullName);
+                    }
+                }
+                textWriter.WriteEndAttribute();
+                textWriter.WriteEndElement();
+            }
+            textWriter.WriteEndElement();
+            textWriter.Close();
+        }
     }
 }
