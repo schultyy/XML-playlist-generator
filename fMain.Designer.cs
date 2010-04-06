@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMain));
             this.lbSelectFolder = new System.Windows.Forms.Label();
             this.txtRootfolder = new System.Windows.Forms.TextBox();
             this.btBrowseRoot = new System.Windows.Forms.Button();
             this.txtPlaylist = new System.Windows.Forms.TextBox();
             this.lbSelectPlaylist = new System.Windows.Forms.Label();
             this.btBrowseFile = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btCreatePlaylist = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbSelectFolder
@@ -95,13 +94,6 @@
             this.btBrowseFile.UseVisualStyleBackColor = true;
             this.btBrowseFile.Click += new System.EventHandler(this.btBrowseFile_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 109);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(559, 31);
-            this.progressBar1.TabIndex = 6;
-            // 
             // btCreatePlaylist
             // 
             this.btCreatePlaylist.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -113,23 +105,15 @@
             this.btCreatePlaylist.UseVisualStyleBackColor = true;
             this.btCreatePlaylist.Click += new System.EventHandler(this.btCreatePlaylist_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 162);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(556, 39);
-            this.textBox1.TabIndex = 8;
-            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(722, 213);
-            this.Controls.Add(this.textBox1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(722, 175);
             this.Controls.Add(this.btCreatePlaylist);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.btBrowseFile);
             this.Controls.Add(this.lbSelectPlaylist);
             this.Controls.Add(this.txtPlaylist);
@@ -138,10 +122,15 @@
             this.Controls.Add(this.lbSelectFolder);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.Window;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "fMain";
             this.Opacity = 0.8D;
+            this.ShowIcon = false;
             this.Text = "XML Playlist Generator";
+            this.Load += new System.EventHandler(this.fMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,9 +144,7 @@
         private System.Windows.Forms.TextBox txtPlaylist;
         private System.Windows.Forms.Label lbSelectPlaylist;
         private System.Windows.Forms.Button btBrowseFile;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button btCreatePlaylist;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

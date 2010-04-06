@@ -51,5 +51,10 @@ namespace XML_Playlist_Generator
             Playlist p = new Playlist(this.txtRootfolder.Text, this.txtPlaylist.Text);
             p.Scan();
         }
+
+        private void fMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
