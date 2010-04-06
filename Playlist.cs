@@ -51,15 +51,81 @@ namespace XML_Playlist_Generator
                 textWriter.WriteStartElement("album");
                 textWriter.WriteStartAttribute("name");
                 textWriter.WriteValue(d.Name);
-
+                textWriter.WriteEndAttribute();
+                textWriter.WriteStartAttribute("author");
+                textWriter.WriteValue(d.Name);
+                textWriter.WriteEndAttribute(); 
+                textWriter.WriteStartAttribute("imageUrl");
+                textWriter.WriteValue("images\\" + d.Name + "\\" + d.Name + ".jpg");
+                textWriter.WriteEndAttribute(); 
+                textWriter.WriteStartAttribute("link");
+                textWriter.WriteValue("#");
+                textWriter.WriteEndAttribute(); 
                 foreach (FileInfo file in files)
                 {
                     if (file.Extension == ".mp3")
                     {
                         TagLib.File f = TagLib.File.Create(file.FullName);
+
+                        //Writing Song-tag
+
+                        textWriter.WriteStartElement("song");
+
+                        //Writing name attribute
+                        textWriter.WriteStartAttribute("name");
+                        if (f.Tag.AlbumArtists.Length > 0 && f.Tag.Title != null)
+                        {
+                            textWriter.WriteValue(f.Tag.AlbumArtists[0] + " - " + f.Tag.Title);
+                        }
+                        else if (f.Tag.Title != null)
+                        {
+                            textWriter.WriteValue(f.Tag.Title);
+                        }
+                        else
+                        {
+                            textWriter.WriteValue("");
+                        }
+                        textWriter.WriteEndAttribute();
+                        //----------------------------------
+
+                        //writing duration attribute
+
+                        textWriter.WriteStartAttribute("duration");
+                        textWriter.WriteValue(f.Properties.Duration.Minutes.ToString() + " : " +
+                            f.Properties.Duration.Seconds.ToString());
+                        textWriter.WriteEndAttribute();
+                        //-------------------------------------------------
+
+                        //writing buy attribute
+                        textWriter.WriteStartAttribute("buy");
+                        textWriter.WriteValue("false");
+                        textWriter.WriteEndAttribute();
+                        //--------------------------------
+
+                        //writing download attribute
+                        textWriter.WriteStartAttribute("download");
+                        textWriter.WriteValue(true);
+                        textWriter.WriteEndAttribute();
+                        //--------------------------------
+
+                        //writing buyLink attribute
+                        textWriter.WriteStartAttribute("buyLink");
+                        textWriter.WriteValue("http://www.flabell.com");
+                        textWriter.WriteEndAttribute();
+                        //--------------------------------
+
+                        //writing downloadSource attribute
+                        textWriter.WriteStartAttribute("downloadSource");
+                        textWriter.WriteValue("player/songs/" + file.Name);
+                        textWriter.WriteEndAttribute();
+                        //--------------------------------
+
+                        textWriter.WriteValue("songs/" + file.Name);
+
+                        textWriter.WriteEndElement();
                     }
                 }
-                textWriter.WriteEndAttribute();
+                //textWriter.WriteEndAttribute();
                 textWriter.WriteEndElement();
             }
             textWriter.WriteEndElement();
